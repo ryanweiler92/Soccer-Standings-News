@@ -17,9 +17,11 @@ The <select> form will have to be initialzed with Javascript.
 
 Table will need headers of "Position", "Team", "Games Played", "Wins", "Losses", "Draws", "Points". We will make the rest of the table body dynamically in Javascript. 
 
-Materialize uses Container/Row/Column grid system. You can use <div class="valign-wrapper"> to vertically center items. 
+Materialize uses Container/Row/Column grid system. You can use `<div class="valign-wrapper">` to vertically center items. 
 
 We can display the news section on seperate HTML page.
 
 ## Javascript Notes
+
+
 
