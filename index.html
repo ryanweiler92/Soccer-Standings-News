@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Soccor Standings and News</title>
+    
+</head>
+  <header class="valign-wrapper">
+    <h1 id="title">Soccer Standing and News</h1>
+  </header>
+  <section id="hero"  style= "border: 1px dashed orange"></section>
+  <!--content container-->
+  <div class="row" style= "border: 2px dashed red">
+    <div class=""  style= "border: 5px dashed purple">
+      <p>Instruction: select a league from the dropdown to see the current standings. Click on a teams name to see recent new stories.</p>
+    </div>
+    <div class="dropdown" style= "border: 5px solid blue">
+      
+      <select name="task-type" id="dropdown1" class="dropdown-content" style="border: 3px solid green">
+        <option value="" disabled selected> ⚽ Select League</option>
+        <option value="eng. 1">English Premier League</option>
+        <option value="ger. 1">German Bundesliga</option>
+        <option value="ita. 1">Italian Serie A</option>
+        <option value="esp. 1">Spanish Primera Divisio</option>
+      </select>
+    </div>
+    <div class="form-group col s3" style= "border: 1px solid green">
+      <button class="btn" id="save-task" 
+       type="submit">Submit
+       </button>
+    </div style= "border: 1px dashed black">
+  <div>
+      <table></table>
+  </div>
+  </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="./assets/javascript/script.js"></script>
+    <script type="text/javascript" src="./assets/javascript/materialize.min.js"></script>
+  </body>
+</html>
