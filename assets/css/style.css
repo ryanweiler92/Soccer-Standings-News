@@ -1,10 +1,16 @@
-.dropdown {
-  height: 200px;
+.Mycontainer {
+  margin: 0 auto;
+  max-width: 2000px;
+  width: 100vw;
 }
-.row {
-  height:500px;
-  justify-content: center;
-}
-#hero {
-  height: 100 px;
+
+
+.hero {
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 125px;
+  width: 100%;
+  opacity: 80%;
+  border: 2px solid black;
 }

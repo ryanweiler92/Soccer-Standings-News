@@ -1,47 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css"  media="screen,projection"/>
-  <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Soccor Standings and News</title>
-    
-</head>
-  <header class="valign-wrapper">
-    <h1 id="title">Soccer Standing and News</h1>
-  </header>
-  <section id="hero"  style= "border: 1px dashed orange"></section>
-  <!--content container-->
-  <div class="row" style= "border: 2px dashed red">
-    <div class=""  style= "border: 5px dashed purple">
-      <p>Instruction: select a league from the dropdown to see the current standings. Click on a teams name to see recent new stories.</p>
-    </div>
-    <div class="dropdown" style= "border: 5px solid blue">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <title>Soccer Standings and News</title>
+  </head>
+  <body>
+      <div class="Mycontainer">
+          <nav>
+              <div class="nav-wrapper green lighten-3">
+                <a class="brand-logo p-2">Soccer Standings & News</a>
+                <ul id="nav-mobile" class="right">
+                  
+                </ul>
+              </div>
+            </nav>
+  
+            <div class="row">
+              <div class="col s12 hero">
+              </div>
+          </div>
+  
+
+          <div class="row">
+            <section class="col s12">
+
+                <div class="row instructions-input">
+                    <div class="valign-wrapper s12">
+                    <div class="col s12 m3 l3">
+                        <p class="text-center">Instructions: Select a league from the drop down to see the current standings. Click on a teams name to see recent news stories.</p>
+                    </div>
+                    <div class="input-field col s12 m3 l3">
+                        <i class="material-icons prefix">sports_soccer</i>
+                        <select id="league-selections">
+                            <option value="" disabled selected>Select League</option>
+                            <option value="eng.1">English Premier League</option>
+                            <option value="ger.1">German Bundesliga</option>
+                            <option value="ita.1">Italian Serie A</option>
+                            <option value="esp.1">Spanish Primera Division</option>
+                        </select>
+                        <label>League Selection</label>
+                    </div><!--end of input field-->
+                    <div class="col s12 m3 l3">
+                        <a id="league-submit-btn" class="waves-effect waves-light btn"><i class="material-icons left">find_in_page</i>Submit</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12">
+                        <table id="standings-table" class="striped centered">
+                            <div>
+                                <h5 class="text-center"><span id="league-name">Standings</span></h5>
+                            </div>              
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Team</th>
+                                    <th>Games Played</th>
+                                    <th>Wins</th>
+                                    <th>Losses</th>
+                                    <th>Draws</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
       
-      <select name="task-type" id="dropdown1" class="dropdown-content" style="border: 3px solid green">
-        <option value="" disabled selected> ⚽ Select League</option>
-        <option value="eng. 1">English Premier League</option>
-        <option value="ger. 1">German Bundesliga</option>
-        <option value="ita. 1">Italian Serie A</option>
-        <option value="esp. 1">Spanish Primera Divisio</option>
-      </select>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </section>
+
+        </div>
+
     </div>
-    <div class="form-group col s3" style= "border: 1px solid green">
-      <button class="btn" id="save-task" 
-       type="submit">Submit
-       </button>
-    </div style= "border: 1px dashed black">
-  <div>
-      <table></table>
-  </div>
-  </div>
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="./assets/javascript/script.js"></script>
-    <script type="text/javascript" src="./assets/javascript/materialize.min.js"></script>
-  </body>
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+</body>         
 </html>
