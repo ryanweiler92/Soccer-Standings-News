@@ -28,6 +28,7 @@ var leagueSearch = function (selection) {
       if (response.ok) {
           response.json().then(function(data){
               console.log(data)
+							displayStanding(data)
           })
       } else {
           console.log("Error: No data found")
@@ -38,6 +39,42 @@ var leagueSearch = function (selection) {
   })
 }
 
+var displayStanding = function(data) {
+	var tableBody = document.getElementById('table-body');
+	tableBody.textContent = ''
+	for (i = 0; i < data.data.standings.length; i++) {
+		var tableRowEl = document.createElement('tr')
+		tableBody.appendChild(tableRowEl)
 
+		var position = document.createElement('td')
+		position.textContent = data.data.standings[i].stats[8].displayValue
+		tableRowEl.appendChild(position)
+
+		var team = document.createElement('a')
+		team.textContent = data.data.standings[i].team.displayName
+		team.setAttribute('id', data.data.standings[i].team.displayName)
+		tableRowEl.appendChild(team)
+
+		var gamesPlayed = document.createElement('td')
+		gamesPlayed.textContent = data.data.standings[i].stats[3].displayValue
+		tableRowEl.appendChild(gamesPlayed)
+
+		var wins = document.createElement('td')
+		wins.textContent = data.data.standings[i].stats[0].displayValue
+		tableRowEl.appendChild(wins)
+
+		var losses = document.createElement('td')
+		losses.textContent = data.data.standings[i].stats[1].displayValue
+		tableRowEl.appendChild(losses)
+
+		var draws = document.createElement('td')
+		draws.textContent = data.data.standings[i].stats[2].displayValue
+		tableRowEl.appendChild(draws)
+
+		var points = document.createElement('td')
+		points.textContent = data.data.standings[i].stats[6].displayValue
+		tableRowEl.appendChild(points)
+	}
+}
 
 submitBtn.addEventListener("click", getLeagueSelection)
