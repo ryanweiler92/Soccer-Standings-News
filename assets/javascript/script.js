@@ -39,10 +39,19 @@ var leagueSearch = function (selection) {
   })
 }
 
+
+var saveTeamName = function(id){
+  console.log("save function is running");
+  localStorage.setItem("team", id)
+}
+
 var displayStanding = function(data) {
+
 	var tableBody = document.getElementById('table-body');
 	tableBody.textContent = ''
+
 	for (i = 0; i < data.data.standings.length; i++) {
+
 		var tableRowEl = document.createElement('tr')
 		tableBody.appendChild(tableRowEl)
 
@@ -53,6 +62,8 @@ var displayStanding = function(data) {
 		var team = document.createElement('a')
 		team.textContent = data.data.standings[i].team.displayName
 		team.setAttribute('id', data.data.standings[i].team.displayName)
+    team.setAttribute("onclick", "saveTeamName(this.id)")
+    team.setAttribute("href", "news.html")
 		tableRowEl.appendChild(team)
 
 		var gamesPlayed = document.createElement('td')
