@@ -1,7 +1,14 @@
+* {
+  padding: 0%;
+  margin: auto;
+}
+
+
+
 .Mycontainer {
   margin: 0 auto;
-  max-width: 2000px;
-  width: 100vw;
+  /* max-width: 2000px; */
+  width: 100%;
 }
 
 
@@ -13,4 +20,18 @@
   width: 100%;
   opacity: 80%;
   border: 2px solid black;
+}
+
+.section {
+  padding: 100px;
+  width: 100%;
+}
+
+.scores {
+  padding: 25%;
+}
+
+.nav-wrapper  {
+  padding: 10px;
+  text-align: center;
 }
