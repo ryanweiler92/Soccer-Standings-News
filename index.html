@@ -11,6 +11,8 @@
   </head>
   <body>
       <div class="Mycontainer">
+         <!--Header with anchor tag-->
+         <header>
           <nav>
               <div class="nav-wrapper indigo">
                 <a class="brand-logo p-2">Soccer Standings & News</a>
@@ -19,21 +21,26 @@
                 </ul>
               </div>
             </nav>
-  
+         </header>
+         <!--Hero section-->
+         <section>
             <div class="row">
               <div class="col s12 hero">
               </div>
           </div>
+         </section> 
   
 
           <div class="row">
-            <section class="col s12">
-
+            <!--Main section of page-->
+            <main class="col s12">
                 <div class="row instructions-input">
                     <div class="valign-wrapper s12">
                     <div class="col s12 m3 l3">
-                        <p class="text-center">Instructions: Select a league from the drop down to see the current standings. Click on a teams name to see recent news stories.</p>
+                        <p class="text-center">Instructions: Select a league from the drop down to see the current standings.
+Click on a teams name to see recent news stories.</p>
                     </div>
+                    <!--Start of input field-->
                     <div class="input-field col s12 m3 l3">
                         <i class="material-icons prefix">sports_soccer</i>
                         <select id="league-selections">
@@ -45,15 +52,17 @@
                         </select>
                         <label>League Selection</label>
                     </div>
-                    <!--end of input field-->
+                    <!--End of input field-->
                     <div class="col s12 m3 l3">
-                        <a id="league-submit-btn" class="waves-effect waves-light btn"><i class="material-icons left">find_in_page</i>Submit</a>
+                        <a id="league-submit-btn" class="waves-effect waves-light btn"><i class="material-icons 
+left">find_in_page</i>Submit</a>
                     </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col s12">
+                        <!--Table for standings-->
                         <table id="standings-table" class="striped centered">
                             <div>
                                 <h5 class="text-center"><span id="league-name">Standings</span></h5>
@@ -77,7 +86,7 @@
                 </div>
 
 
-            </section>
+            </main>
 
         </div>
 
@@ -85,6 +94,8 @@
 
     </div>
 
+    <!--Footer-->
+    <footer>@2022 ryanweiler92, dsapione, reggietenk, tooqk4u</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/javascript/script.js"></script>
 </body>         
