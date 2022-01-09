@@ -12,12 +12,12 @@
   <body>
       <div class="Mycontainer">
          <!--Header with anchor tag-->
-         <header>
+         <header >
           <nav>
               <div class="nav-wrapper indigo">
-                <a class="brand-logo p-2">Soccer Standings & News</a>
+                <a class="brand-logo p-2 " id="page-title">Soccer Standings & News</a>
                 <ul id="nav-mobile" class="right">
-                    <li><a href="news.html">News Page</a></li>
+                    <li id="news"><a href="news.html">News Page</a></li>
                 </ul>
               </div>
             </nav>
@@ -38,13 +38,13 @@
                     <div class="valign-wrapper s12">
                     <div class="col s12 m3 l3">
                         <p class="text-center">Instructions: Select a league from the drop down to see the current standings.
-Click on a teams name to see recent news stories.</p>
+                        Click on a teams name to see recent news stories.</p>
                     </div>
                     <!--Start of input field-->
-                    <div class="input-field col s12 m3 l3">
-                        <i class="material-icons prefix">sports_soccer</i>
-                        <select id="league-selections">
-                            <option value="" disabled selected>Select League</option>
+                    <div class="input-field col s12 m3 l3" >
+                        <i class="material-icons prefix" >sports_soccer</i>
+                        <select id="league-selections" >
+                            <option id="drop-down" value="" disabled selected >Select League</option>
                             <option value="eng.1">English Premier League</option>
                             <option value="ger.1">German Bundesliga</option>
                             <option value="ita.1">Italian Serie A</option>
@@ -54,8 +54,9 @@ Click on a teams name to see recent news stories.</p>
                     </div>
                     <!--End of input field-->
                     <div class="col s12 m3 l3">
-                        <a id="league-submit-btn" class="waves-effect waves-light btn"><i class="material-icons 
-left">find_in_page</i>Submit</a>
+                        <a id="league-submit-btn" class="waves-effect waves-light btn">
+                            <i class="material-icons left">find_in_page</i>Submit
+                        </a>
                     </div>
                     </div>
                 </div>
@@ -68,7 +69,7 @@ left">find_in_page</i>Submit</a>
                                 <h5 class="text-center"><span id="league-name">Standings</span></h5>
                             </div>              
                             <thead>
-                                <tr>
+                                <tr >
                                     <th>Position</th>
                                     <th>Team</th>
                                     <th>Games Played</th>
