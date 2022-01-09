@@ -71,15 +71,11 @@ footer {
   footer {
     padding: 7%;
   }
-     
-  }
-  @media screen and (min-width: 0px) {
-
   html {
     font-size: .75rem;  
-  
+    
   }
-
+     
   footer {
     padding: 5%;
     margin-bottom: 9;
@@ -92,7 +88,6 @@ html {
 }
   
 footer {
-  padding: 50%;
-  
+  padding: 50%;  
   text-align: center;  }
 }
