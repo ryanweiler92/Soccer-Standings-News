@@ -7,35 +7,92 @@
   margin: 0;
   width: 100%;
 }
+
 /* page title style */
 .brand-logo {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 30%;
   text-shadow: darkgray;  
   text-indent: 20px;
-  
+}
+#page-title {
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* hero style */
 .hero {
-  background-image: url(../images/soccerfield.jpg);
+  background-image: url(../images/hero.png);
   background-size: cover;
   background-position: center;
-  height: 125px;
+  height: 300px;
   width: 100%;
   opacity: 80%;
   border: 2px solid black;
 }
 
+/* stories style */
+#stories {
+  text-align: center;
+}
 /* score widget style */
 .scores {
   padding: 30%;
-  
-  
   
 }
 /* nav style */
 .nav-wrapper  {
   padding: 0;
   
+}
+footer {
+  padding-top: 5%;
+  justify-content: space-between;
+  width: 100%;
+}
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  
+  footer {
+    padding: 20%;
+    text-align: center;  }
+}
+  
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 619px) {
+
+  #page-title {
+    font-size: 1.5rem;
+  }
+ input.select-dropdown.dropdown-trigger {
+    font-size: 0.875rem;
+  }
+  footer {
+    padding: 7%;
+  }
+     
+  }
+  @media screen and (min-width: 0px) {
+
+  html {
+    font-size: .75rem;  
+  
+  }
+
+  footer {
+    padding: 5%;
+    margin-bottom: 9;
+    text-align: center;  }
+  }
+
+@media screen and (max-width: 413px) {
+html {
+  font-size: .5rem;    
+}
+  
+footer {
+  padding: 50%;
+  
+  text-align: center;  }
 }
