@@ -1,14 +1,16 @@
 ## SOCCER STANDINGS API DOCUMENTATION (NO API KEY NEEDED)
 https://github.com/azharimm/football-standings-api
 
-## THE GUARDIAN API DOCUMENTATION
-https://open-platform.theguardian.com/documentation/search
+## MEDIASTACK API DOCUMENTATION
+https://mediastack.com/documentation
 
-## THE GUARDIAN API KEY
-823347bb-3e0f-4e08-91b9-14d760a5bfbb
+## MEDIASTACK API KEY
+9b53c76ea86c2083128ed373b41e7716
 
 ## MATERIALIZE DOCUMENTATION
 https://materializecss.com/getting-started.html
+
+![screenshot](./assets/images/Screenshot.jpg)
 
 ## HTML/CSS NOTES
 Dropdown form needs 4 selections: "English Premier League", "German Bundesliga", "Italian Serie A", "Spanish Primera Division". Each option will need a value of "eng.1", "ger.1", "ita.1" or "esp.1" respectively. Instructions paragraph and a submit button will also be needed. 
