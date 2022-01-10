@@ -47,6 +47,11 @@ var populateStories = function(data) {
 			article.appendChild(img)
 		}
 	}
+	// if (!data.data.length) {		
+	// 	var elems = document.getElementsById('modal1');
+	// 	var instance = M.Modal.init(elems,);
+	// 	instance.open()
+	// }
 }
 
 
