@@ -28,13 +28,23 @@ var newsSearch = function(team){
     })
 }
 
+var populateStories = function(data) {
+	var newsBody = document.getElementById('stories')
+	var title =  document.createElement('h5')
+	title.innerHTML = 'Current News Articles'
+	newsBody.appendChild(title)
 
-
-
-
-
-
-
+	for (var i = 0; i < data.data.length; i++) {
+		var article = document.createElement('a')
+		article.setAttribute('href', data.data[i].url)
+		article.setAttribute('target', 'blank')
+		var img = document.createElement('img')
+		img.setAttribute('src', data.data[i].image)
+		img.setAttribute('alt', `${data.data[i].title}`)
+		newsBody.appendChild(article)
+		article.appendChild(img)
+	}
+}
 
 
 loadTeamName();
