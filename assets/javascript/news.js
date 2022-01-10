@@ -38,11 +38,14 @@ var populateStories = function(data) {
 		var article = document.createElement('a')
 		article.setAttribute('href', data.data[i].url)
 		article.setAttribute('target', 'blank')
-		var img = document.createElement('img')
-		img.setAttribute('src', data.data[i].image)
-		img.setAttribute('alt', `${data.data[i].title}`)
-		newsBody.appendChild(article)
-		article.appendChild(img)
+		newsBody.appendChild(article)		
+
+		if (data.data[i].image) {
+			var img = document.createElement('img')
+			img.setAttribute('src', data.data[i].image)
+			img.setAttribute('alt', `${data.data[i].title}`)
+			article.appendChild(img)
+		}
 	}
 }
 
