@@ -1,5 +1,4 @@
-//http://api.mediastack.com/v1/news?sources=espn&keywords=chelsea&sort=published_desc&access_key=9b53c76ea86c2083128ed373b41e7716
-
+//https://api.thenewsapi.com/v1/news/top?search=liverpool&categories=sports&api_token=YiEYgKpLun5eS68yb55rItcElbcXzwUYdlZaVqbg&locale=us&limit=5
 
 var loadTeamName = function(){
     var teamSelection = localStorage.getItem("team");
@@ -11,7 +10,7 @@ var loadTeamName = function(){
 
 var newsSearch = function(team){
 
-    var apiUrl =  "http://api.mediastack.com/v1/news?sources=espn&keywords="+team+"&sort=published_desc&access_key=9b53c76ea86c2083128ed373b41e7716"
+    var apiUrl =  "https://api.thenewsapi.com/v1/news/top?search="+team+"&categories=sports&api_token=YiEYgKpLun5eS68yb55rItcElbcXzwUYdlZaVqbg&locale=us&limit=5"
 
     fetch(apiUrl).then(function(response){
         if (response.ok) {
@@ -49,7 +48,7 @@ var populateStories = function(data) {
 		centerDiv.appendChild(storyTitle)
 	}else{
 
-		for (var i = 0; i < 6; i++) {
+		for (var i = 0; i < 5; i++) {
 
 			var rowDiv = document.createElement("div");
         	rowDiv.setAttribute("class", "row");
@@ -69,11 +68,10 @@ var populateStories = function(data) {
 			centerDiv.appendChild(article)		
 
 			var storyImage = document.createElement("img");
-			if (data.data[i].image == null){
+			if (data.data[i].image_url == null){
 				storyImage.setAttribute("src", "./assets/images/stock.jpg");
-				storyImage.setAttribute("class", "responsive-img")
 			} else{
-			storyImage.setAttribute("src", data.data[i].image);
+			storyImage.setAttribute("src", data.data[i].image_url);
 			}
 			storyImage.setAttribute("class", "responsive-img")
 			article.appendChild(storyImage)
