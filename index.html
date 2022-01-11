@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="./assets/css/style.css" rel="stylesheet">
-		<link rel="shortcut icon" type="image/png" href="./assets/images/Favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="./assets/images/Favicon.png"/>
+    <link href="./assets/css/style.css" rel="stylesheet">	
     <title>Soccer Standings and News</title>
   </head>
   <body>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4 class="text-center">Welcome to Soccer Standings & News</h4>
+          <p class="text-center">Instructions: Select one of the 4 selectable European soccer leagues from the dropdown to see the current standings.
+              Click on the team name for any club to see relevent news articles. Enjoy!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+      </div>
+
       <div class="Mycontainer">
+
          <!--Header with anchor tag-->
          <header >
           <nav>
               <div class="nav-wrapper indigo">
                 <a class="brand-logo p-2 " id="page-title">Soccer Standings & News</a>
                 <ul id="nav-mobile" class="right">
-                    <li id="news"><a href="news.html">News Page</a></li>
+                    <li id="news"></li>
                 </ul>
               </div>
             </nav>
@@ -30,7 +44,7 @@
               </div>
           </div>
          </section> 
-  
+
 
           <div class="row">
             <!--Main section of page-->

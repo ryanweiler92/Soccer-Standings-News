@@ -2,8 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems);
 });
-var elem = document.getElementById("league-selections")
-var instance = M.FormSelect.getInstance(elem)
+ var elem = document.getElementById("league-selections")
+ var instance = M.FormSelect.getInstance(elem)
+
+
+
+const elem2 = document.getElementById("modal1");
+const instance2 = M.Modal.init(elem2);
+instance2.open(); 
 
 var submitBtn = document.getElementById("league-submit-btn")
 
@@ -16,6 +22,7 @@ var getLeagueSelection = function(){
   var selection = input.value 
   //run API with selected option 
   leagueSearch(selection)
+
 
 }
 
@@ -62,8 +69,8 @@ var displayStanding = function(data) {
 		var team = document.createElement('a')
 		team.textContent = data.data.standings[i].team.displayName
 		team.setAttribute('id', data.data.standings[i].team.displayName)
-    team.setAttribute("onclick", "saveTeamName(this.id)")
-    team.setAttribute("href", "news.html")
+   	 	team.setAttribute("onclick", "saveTeamName(this.id)")
+    	team.setAttribute("href", "news.html")
 		tableRowEl.appendChild(team)
 
 		var gamesPlayed = document.createElement('td')
