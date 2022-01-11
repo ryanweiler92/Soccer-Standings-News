@@ -34,25 +34,60 @@ var populateStories = function(data) {
 	title.innerHTML = 'Current News Articles'
 	newsBody.appendChild(title)
 
-	for (var i = 0; i < data.data.length; i++) {
-		var article = document.createElement('a')
-		article.setAttribute('href', data.data[i].url)
-		article.setAttribute('target', 'blank')
-		newsBody.appendChild(article)		
+	if(data.data.length == 0){
+		var rowDiv = document.createElement("div");
+		rowDiv.setAttribute("class", "row");
+		newsBody.appendChild(rowDiv);
 
-		if (data.data[i].image) {
-			var img = document.createElement('img')
-			img.setAttribute('src', data.data[i].image)
-			img.setAttribute('alt', `${data.data[i].title}`)
-			article.appendChild(img)
+		var centerDiv = document.createElement("div");
+		centerDiv.setAttribute("class", "center-align");
+		rowDiv.appendChild(centerDiv);
+
+		var storyTitle = document.createElement("h3");
+		storyTitle.textContent = "Sorry, no team news at this time."
+		centerDiv.appendChild(storyTitle)
+	}else{
+
+		for (var i = 0; i < 6; i++) {
+
+			var rowDiv = document.createElement("div");
+        	rowDiv.setAttribute("class", "row");
+        	newsBody.appendChild(rowDiv);
+
+        	var centerDiv = document.createElement("div");
+        	centerDiv.setAttribute("class", "center-align");
+        	rowDiv.appendChild(centerDiv);
+
+        	var storyTitle = document.createElement("h3");
+        	storyTitle.textContent = data.data[i].title;
+        	centerDiv.appendChild(storyTitle)
+
+			var article = document.createElement('a')
+			article.setAttribute('href', data.data[i].url)
+			article.setAttribute('target', 'blank')
+			centerDiv.appendChild(article)		
+
+			var storyImage = document.createElement("img");
+			if (data.data[i].image == null){
+				storyImage.setAttribute("src", "./assets/images/stock.jpg");
+				storyImage.setAttribute("class", "responsive-img")
+			} else{
+			storyImage.setAttribute("src", data.data[i].image);
+			}
+			storyImage.setAttribute("class", "responsive-img")
+			article.appendChild(storyImage)
 		}
 	}
-	// if (!data.data.length) {		
+	
+}
+
+
+
+loadTeamName();
+
+
+// if (!data.data.length) {		
 	// 	var elems = document.getElementsById('modal1');
 	// 	var instance = M.Modal.init(elems,);
 	// 	instance.open()
 	// }
-}
-
-
-loadTeamName();
