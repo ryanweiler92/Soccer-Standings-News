@@ -28,6 +28,7 @@ var newsSearch = function(team){
     })
 }
 
+
 var populateStories = function(data) {
 	var newsBody = document.getElementById('stories')
 	var title =  document.createElement('h5')
@@ -80,7 +81,6 @@ var populateStories = function(data) {
 	}
 	
 }
-
 
 
 loadTeamName();
