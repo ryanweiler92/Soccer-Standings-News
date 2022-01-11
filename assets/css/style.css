@@ -38,7 +38,8 @@
 }
 /* score widget style */
 .scores {
-  padding: 30%;
+  padding-left: 30%;
+  padding-right: 30%
   
 }
 /* nav style */
