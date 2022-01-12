@@ -1,33 +1,29 @@
 # SOCCER STANDINGS & NEWS
 
-## SOCCER STANDINGS API DOCUMENTATION (NO API KEY NEEDED)
+## Project Overview
+Our website features team standings & news for the four most popular soccer leagues in Europe. When you select a league from the dropdown you are provided with the current standings from each league. Clicking on a team name will provide you with the most current news about the team. 
+
+
+##  API'S USED FOR SOCCER NEWS & STANDINGS WEBSITE
 
 <https://github.com/azharimm/football-standings-api>
 
-## MEDIASTACK API DOCUMENTATION
+<https://newsapi.org>
 
-<https://mediastack.com/documentation>
+## Website Created With
+### HTML
+### CSS
+### Materialize
+### JavaScript
 
-## MEDIASTACK API KEY
+## Website
+https://ryanweiler92.github.io/Soccer-Standings-News/
 
-9b53c76ea86c2083128ed373b41e7716
+![screenshot](./assets/images/screenshot.png)
 
-## MATERIALIZE DOCUMENTATION
 
-<https://materializecss.com/getting-started.html>
-
-![screenshot](./assets/images/Screenshot.jpg)
-
-## HTML/CSS NOTES
-
-Dropdown form needs 4 selections: "English Premier League", "German Bundesliga", "Italian Serie A", "Spanish Primera Division". Each option will need a value of "eng.1", "ger.1", "ita.1" or "esp.1" respectively. Instructions paragraph and a submit button will also be needed.
-
-The `<select>` form will have to be initialzed with Javascript.
-
-Table will need headers of "Position", "Team", "Games Played", "Wins", "Losses", "Draws", "Points". We will make the rest of the table body dynamically in Javascript.
-
-Materialize uses Container/Row/Column grid system. You can use `<div class="valign-wrapper">` to vertically center items.
-
-We can display the news section on seperate HTML page.
-
-## Javascript Notes
+## Created By
+### Ryan Weiler
+### Daniel Sapione
+### Shelley Soucie
+### Reggie Tenkorang
