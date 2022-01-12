@@ -1,118 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="shortcut icon" type="image/png" href="./assets/images/Favicon.png"/>
-    <link href="./assets/css/style.css" rel="stylesheet">	
-    <title>Soccer Standings and News</title>
-  </head>
-  <body>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="shortcut icon" type="image/png" href="./assets/images/Favicon.png"/>
+	<link href="./assets/css/style.css" rel="stylesheet">	
+	<title>Soccer Standings and News</title>
+</head>
 
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-          <h4 class="text-center">Welcome to Soccer Standings & News</h4>
-          <p class="text-center">Instructions: Select one of the 4 selectable European soccer leagues from the dropdown to see the current standings.
-              Click on the team name for any club to see relevent news articles. Enjoy!
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
-        </div>
-      </div>
+<body>
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4 class="text-center">Welcome to Soccer Standings & News</h4>
+			<p class="text-center">Instructions: Select one of the 4 selectable European soccer leagues from the dropdown to see the current standings.
+					Click on the team name for any club to see relevent news articles. Enjoy!
+			</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+		</div>
+	</div>
 
-      <div class="Mycontainer">
+	<div class="Mycontainer">
+		<!--Header with anchor tag-->
+		<header >
+			<nav>
+				<div class="nav-wrapper indigo">
+					<a class="brand-logo p-2 " id="page-title">Soccer Standings & News</a>
+					<ul id="nav-mobile" class="right">
+						<li id="news"></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
 
-         <!--Header with anchor tag-->
-         <header >
-          <nav>
-              <div class="nav-wrapper indigo">
-                <a class="brand-logo p-2 " id="page-title">Soccer Standings & News</a>
-                <ul id="nav-mobile" class="right">
-                    <li id="news"></li>
-                </ul>
-              </div>
-            </nav>
-         </header>
-         <!--Hero section-->
-         <section>
-            <div class="row">
-              <div class="col s12 hero">
-              </div>
-          </div>
-         </section> 
+		<!--Hero section-->
+		<section>
+			<div class="row">
+				<div class="col s12 hero"></div>
+			</div>
+		</section> 
 
+		<div class="row">
+			<!--Main section of page-->
+			<main class="col s12">
+				<div class="row instructions-input">
+					<div class="valign-wrapper s12">
+						<div class="col s12 m3 l3">
+							<p class="text-center">Instructions: Select a league from the drop down to see the current standings.
+							Click on a teams name to see recent news stories.</p>
+						</div>
 
-          <div class="row">
-            <!--Main section of page-->
-            <main class="col s12">
-                <div class="row instructions-input">
-                    <div class="valign-wrapper s12">
-                    <div class="col s12 m3 l3">
-                        <p class="text-center">Instructions: Select a league from the drop down to see the current standings.
-                        Click on a teams name to see recent news stories.</p>
-                    </div>
-                    <!--Start of input field-->
-                    <div class="input-field col s12 m3 l3" >
-                        <i class="material-icons prefix" >sports_soccer</i>
-                        <select id="league-selections" >
-                            <option id="drop-down" value="" disabled selected >Select League</option>
-                            <option value="eng.1">English Premier League</option>
-                            <option value="ger.1">German Bundesliga</option>
-                            <option value="ita.1">Italian Serie A</option>
-                            <option value="esp.1">Spanish Primera Division</option>
-                        </select>
-                        <label>League Selection</label>
-                    </div>
-                    <!--End of input field-->
-                    <div class="col s12 m3 l3">
-                        <a id="league-submit-btn" class="waves-effect waves-light btn">
-                            <i class="material-icons left">find_in_page</i>Submit
-                        </a>
-                    </div>
-                    </div>
-                </div>
+						<!--Start of input field-->
+						<div class="input-field col s12 m3 l3" >
+							<i class="material-icons prefix" >sports_soccer</i>
+							<select id="league-selections" >
+								<option id="drop-down" value="" disabled selected >Select League</option>
+								<option value="eng.1">English Premier League</option>
+								<option value="ger.1">German Bundesliga</option>
+								<option value="ita.1">Italian Serie A</option>
+								<option value="esp.1">Spanish Primera Division</option>
+							</select>
+							<label>League Selection</label>
+						</div>
 
-                <div class="row">
-                    <div class="col s12">
-                        <!--Table for standings-->
-                        <table id="standings-table" class="striped centered">
-                            <div>
-                                <h5 class="text-center"><span id="league-name">Standings</span></h5>
-                            </div>              
-                            <thead>
-                                <tr >
-                                    <th>Position</th>
-                                    <th>Team</th>
-                                    <th>Games Played</th>
-                                    <th>Wins</th>
-                                    <th>Losses</th>
-                                    <th>Draws</th>
-                                    <th>Points</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table-body">
-      
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+						<!--End of input field-->
+						<div class="col s12 m3 l3">
+							<a id="league-submit-btn" class="waves-effect waves-light btn">
+								<i class="material-icons left">find_in_page</i>Submit
+							</a>
+						</div>
+					</div>
+				</div>
 
+				<div class="row">
+					<div class="col s12">
 
-            </main>
-
-        </div>
-
-    </div>
-
-    </div>
-
-    <!--Footer-->
-    <footer>@2022 ryanweiler92, dsapione, reggietenk, tooqk4u</footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/javascript/script.js"></script>
+						<!--Table for standings-->
+						<table id="standings-table" class="striped centered">
+							<div>
+								<h5 class="text-center"><span id="league-name">Standings</span></h5>
+							</div>              
+							<thead>
+								<tr >
+									<th>Position</th>
+									<th>Team</th>
+									<th>Games Played</th>
+									<th>Wins</th>
+									<th>Losses</th>
+									<th>Draws</th>
+									<th>Points</th>
+								</tr>
+							</thead>
+							<tbody id="table-body">
+							</tbody>
+						</table>							
+					</div>
+				</div>
+			</main>
+		</div>		
+	</div>
+	
+	<!--Footer-->
+	<footer>@2022 ryanweiler92, dsapione, reggietenk, tooqk4u</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="assets/javascript/script.js"></script>
 </body>         
 </html>

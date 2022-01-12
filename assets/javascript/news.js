@@ -1,5 +1,3 @@
-//https://api.thenewsapi.com/v1/news/top?search=liverpool&categories=sports&api_token=YiEYgKpLun5eS68yb55rItcElbcXzwUYdlZaVqbg&locale=us&limit=5
-
 var loadTeamName = function(){
     var teamSelection = localStorage.getItem("team");
 
@@ -82,10 +80,3 @@ var populateStories = function(data) {
 
 
 loadTeamName();
-
-
-// if (!data.data.length) {		
-	// 	var elems = document.getElementsById('modal1');
-	// 	var instance = M.Modal.init(elems,);
-	// 	instance.open()
-	// }
