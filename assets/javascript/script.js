@@ -66,12 +66,15 @@ var displayStanding = function(data) {
 		position.textContent = data.data.standings[i].stats[8].displayValue
 		tableRowEl.appendChild(position)
 
+		var teamEl = document.createElement('td')
+		tableRowEl.appendChild(teamEl)
+
 		var team = document.createElement('a')
 		team.textContent = data.data.standings[i].team.displayName
 		team.setAttribute('id', data.data.standings[i].team.displayName)
    	 	team.setAttribute("onclick", "saveTeamName(this.id)")
     	team.setAttribute("href", "news.html")
-		tableRowEl.appendChild(team)
+		teamEl.appendChild(team)
 
 		var gamesPlayed = document.createElement('td')
 		gamesPlayed.textContent = data.data.standings[i].stats[3].displayValue
